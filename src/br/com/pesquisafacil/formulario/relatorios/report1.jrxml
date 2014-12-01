@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8d6c91e-f41b-4067-adbf-f292a12e5201">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="16"/>
+	<parameter name="dataInicio" class="java.util.Date">
+		<parameterDescription><![CDATA[Data de inicio]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new java.util.Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataFim" class="java.util.Date">
+		<parameterDescription><![CDATA[Data final]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new java.util.Date()]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from tb_avaliacao tb
+where tb.DATA >= $P{dataInicio}
+ and tb.data <= $P{dataFim}]]>
+	</queryString>
+	<field name="ID_AVALIACAO" class="java.lang.Integer"/>
+	<field name="DATA" class="java.sql.Date"/>
+	<field name="N1" class="java.lang.Integer"/>
+	<field name="N2" class="java.lang.Integer"/>
+	<field name="N3" class="java.lang.Integer"/>
+	<field name="INDICARA" class="java.lang.Boolean"/>
+	<field name="COMENTARIOS" class="java.lang.String"/>
+	<field name="ID_CLIENTE" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="21" width="328" height="36" uuid="59bc192c-36c7-4ca7-b3f8-01fe157327f9"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Pesquisa Fácil]]></text>
+			</staticText>
+			<image>
+				<reportElement x="13" y="0" width="82" height="79" uuid="bc2b2983-916f-4eed-b225-3607eeecc4f0"/>
+				<imageExpression><![CDATA["C:\\Users\\Tiago\\Downloads\\Provisório\\Pesquisa Fácil\\build\\classes\\br\\com\\pesquisafacil\\imagem\\logo-espaco-fashion-hair-small.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="169" y="-51" width="32" height="33" uuid="538211bc-e42d-47b6-827a-8207c9ed7927"/>
+				<imageExpression><![CDATA["C:\\Users\\Tiago\\Downloads\\Provisório\\Pesquisa Fácil\\build\\classes\\br\\com\\pesquisafacil\\imagem\\icone-estrela2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="386" y="77" width="57" height="20" uuid="2e2a9c88-acae-4105-ae73-219f4435b522"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ambiente]]></text>
+			</staticText>
+			<image>
+				<reportElement x="285" y="33" width="32" height="33" uuid="f73d9220-4bb6-468f-a8d4-f8ea3f70fb46"/>
+				<imageExpression><![CDATA["C:\\Users\\Tiago\\Downloads\\Provisório\\Pesquisa Fácil\\build\\classes\\br\\com\\pesquisafacil\\imagem\\icone-estrela2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="397" y="33" width="32" height="33" uuid="8a877196-71b7-4c02-a88e-66a2d6d54690"/>
+				<imageExpression><![CDATA["C:\\Users\\Tiago\\Downloads\\Provisório\\Pesquisa Fácil\\build\\classes\\br\\com\\pesquisafacil\\imagem\\icone-estrela2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="77" width="100" height="20" uuid="d0dac267-15c9-4306-a6a3-14475dd4e3c5"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="77" width="69" height="20" uuid="0d198958-a4ea-4954-801d-f237cba534ea"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Atendimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="77" width="57" height="20" uuid="1b118a92-90a1-4925-a31e-9563a033167e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qualidade	]]></text>
+			</staticText>
+			<image>
+				<reportElement x="169" y="35" width="32" height="33" uuid="f2aa4d08-bb8d-44ea-982e-f1295dc3c81d"/>
+				<imageExpression><![CDATA["C:\\Users\\Tiago\\Downloads\\Provisório\\Pesquisa Fácil\\build\\classes\\br\\com\\pesquisafacil\\imagem\\icone-estrela2.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="169" y="12" width="32" height="20" uuid="b987ae3c-1595-46a3-8376-8c69edbe099a"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{N1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="12" width="32" height="20" uuid="1bcc313a-db26-4b29-8866-9ef4b242eae3"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{N2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="12" width="32" height="20" uuid="e100c913-0212-4201-90ef-4144818c978e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{N3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="12" width="100" height="20" uuid="38580a10-0fd0-40c4-8db6-c36684f10208"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
